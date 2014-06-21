@@ -2,7 +2,7 @@
 
 ##Scene
 
-###Without Lazy-loader
+Without Lazy-loader
 
     var sign = require('./controllers/sign');
     var site = require('./controllers/site');
@@ -40,10 +40,10 @@
 
 refer to: https://github.com/cnodejs/nodeclub/blob/master/routes.js
 
-###Lazy-loader is cool
+Lazy-loader is cool
 
     var lazyLoader = require('lazy-loader');
-    var Controller = require('./controllers');
+    var Controller = lazyLoader('./controllers');
 
     app.post('/signout', Controller.sign.signout);
     app.get('/signin', Controller.sign.showLogin);
@@ -58,3 +58,19 @@ refer to: https://github.com/cnodejs/nodeclub/blob/master/routes.js
 ##Install 
 
     npm install lazy-loader
+
+##Example
+
+    var lazyLoader = require('lazy-loader');
+    var Controller = lazyLoader('./controllers');
+
+    app.post('/signout', Controller.sign.signout);
+    app.get('/signin', Controller.sign.showLogin);
+
+##API
+
+###lazyLoader(pathName, args...)
+
+- pathName handlers path.
+- args transfer args to handlers.
+    

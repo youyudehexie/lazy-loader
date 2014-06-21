@@ -10,6 +10,10 @@
     "loader",
     "components"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/youyudehexie/lazy-loader"
+  },
   "author": "youyudehexie",
   "license": "MIT",
   "devDependencies": {
